@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<link rel="stylesheet" type="text/css" href="./ImageGallery.css" media="all"/>
+
+
+		<script src="/frameworks/glow/glow/1.7.0/core/core.js" type="text/javascript"></script>
+		<script type="text/javascript" src="./ImageGallery.js"></script>
+
+		<script type="text/javascript">
+
+			var images = [],
+				options = {};
+
+			images.push ({ filename: './images/snow.png', caption: 'A snow covered cabin in the Alps.', height: 300, width: 740 });
+			images.push ({ filename: './images/palm-trees.png', caption: 'Palm trees in the wind.', height: 300, width: 740 });
+			images.push ({ filename: './images/cityscape.png', caption: 'Cityscape.', height: 300, width: 740 });
+			images.push ({ filename: './images/huts.png', caption: 'Sandy path leads past beach huts and to the sea.', height: 300, width: 740 });
+			images.push ({ filename: './images/beach.png', caption: 'Palm tree on the beach.', height: 300, width: 740 });
+
+			options.thumbnail_size = 100;
+
+			glow.ready (function () {
+				new ImageGallery ('gallery', images, options).start_slideshow ();
+			});
+
+		</script>
+	</head>
+
+	<body>
+		<div id="gallery"></div>
+		<p><a href="http://github.com/paulcuth/ImageGallery" title="View project on Github">Github</a></p>
+	</body>
+</html>
